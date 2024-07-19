@@ -21,11 +21,13 @@ var dbo = client.db(process.env.USER_MGMT_MONGO_DB);
 var expired_token = [];
 
 function send(res, status, message, result) {
-    res.send({
-        "status": status,
-        "message": message,
-        "result": result
-    });
+    if (!res.headersSent) {
+        res.send({
+            "status": status,
+            "message": message,
+            "result": result
+        });
+    }
 }
 
 // verify valid user by checking the jwt information

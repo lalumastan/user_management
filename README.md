@@ -75,5 +75,5 @@ USER_MGMT_MONGO_URI</code></li>
 
 ### Tutorial
 
-<a  href="http://www.youtube.com/watch?feature=player_embedded&v=8DKcwd8DWHg"  target="_blank"><img  src="http://img.youtube.com/vi/8DKcwd8DWHg/0.jpg"  alt="How to Create Secure User Management Web Application using Node JS, Express JS, Angular and JWT" width="240"  height="180"  border="10"  /></a>
+<a  href="http://www.youtube.com/watch?feature=player_embedded&v=otwKiGrtgg4"  target="_blank"><img  src="http://img.youtube.com/vi/otwKiGrtgg4/0.jpg"  alt="How to Create Secure User Management Web Application using Node JS, Express JS, Angular and JWT" width="240"  height="180"  border="10"  /></a>
 
