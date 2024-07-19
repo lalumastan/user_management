@@ -1,0 +1,126 @@
+<div class="row p-2">
+  <div class="col-md-6 user-container border border-primary rounded p-2">
+    <h2 class="text-primary-emphasis text-center">Add User</h2>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()" #myform="ngForm">
+      <div class="form-floating mb-2">
+        <input type="text" formControlName="username" placeholder="username" name="username" class="form-control"
+          id="username" minlength="4" required>
+        <label for="username">User Name:</label>
+        <div
+          *ngIf="addForm.controls['username'].invalid && (addForm.controls['username'].dirty || addForm.controls['username'].touched || myform.submitted)"
+          class="alert alert-danger">
+          <div *ngIf="addForm.controls['username'].hasError('required')">
+            Username is required.
+          </div>
+          <div *ngIf="addForm.controls['username'].hasError('minlength')">
+            Username must be at least 4 characters long.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-floating mb-2">
+        <input type="password" formControlName="password" placeholder="password" name="password" class="form-control"
+          id="password" minlength="4" required>
+        <label for="password">Password:</label>
+        <div
+          *ngIf="addForm.controls['password'].invalid && (addForm.controls['password'].dirty || addForm.controls['password'].touched || myform.submitted)"
+          class="alert alert-danger">
+          <div *ngIf="addForm.controls['password'].hasError('required')">
+            Password is required.
+          </div>
+          <div *ngIf="addForm.controls['password'].hasError('minlength')">
+            Password must be at least 4 characters long.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-control mb-2">
+        <label>User Role:</label>
+        <div class="form-check">
+          <input id="user" type="radio" class="form-check-input" value="ROLE_USER" name="authorities" (change)="onChange($event)" checked>
+          <label class="form-check-label" for="user">User</label>
+        </div>
+
+        <div class="form-check">
+          <input id="admin" type="radio" class="form-check-input" value="ROLE_ADMIN" name="authorities" (change)="onChange($event)">
+          <label class="form-check-label" for="admin">Administrator</label>
+        </div>
+        <div
+          *ngIf="addForm.controls['authorities'].invalid && (addForm.controls['authorities'].dirty || addForm.controls['authorities'].touched || myform.submitted)"
+          class="alert alert-danger">
+          <div *ngIf="addForm.controls['authorities'].hasError('required')">
+            User role is required.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-floating mb-2">
+        <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName"
+          minlength="4" required>
+        <label for="firstName">First Name:</label>
+        <div
+          *ngIf="addForm.controls['firstName'].invalid && (addForm.controls['firstName'].dirty || addForm.controls['firstName'].touched || myform.submitted)"
+          class="alert alert-danger">
+          <div *ngIf="addForm.controls['firstName'].hasError('required')">
+            First name is required.
+          </div>
+          <div *ngIf="addForm.controls['firstName'].hasError('minlength')">
+            First name must be at least 4 characters long.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-floating mb-2">
+        <input formControlName="lastName" placeholder="Last Name" name="lastName" class="form-control" id="lastName"
+          minlength="4" required>
+        <label for="lastName">Last Name:</label>
+        <div
+          *ngIf="addForm.controls['lastName'].invalid && (addForm.controls['lastName'].dirty || addForm.controls['lastName'].touched || myform.submitted)"
+          class="alert alert-danger">
+          <div *ngIf="addForm.controls['lastName'].hasError('required')">
+            Last name is required.
+          </div>
+          <div *ngIf="addForm.controls['lastName'].hasError('minlength')">
+            Last name must be at least 4 characters long.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-floating mb-2">
+        <input type="number" formControlName="age" placeholder="Age" name="age" class="form-control" id="age" min="1"
+          required>
+        <label for="age">Age:</label>
+        <div
+          *ngIf="addForm.controls['age'].errors && (addForm.controls['age'].dirty || addForm.controls['age'].touched || myform.submitted)"
+          class="alert alert-danger">
+          <div *ngIf="addForm.controls['age'].hasError('required')">
+            Age is required.
+          </div>
+          <div *ngIf="addForm.controls['age'].hasError('min')">
+            Age must be greater than or equal to 1.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-floating mb-2">
+        <input type="number" formControlName="salary" placeholder="Salary" name="salary" class="form-control"
+          id="salary" min="1" required>
+        <label for="salary">Salary:</label>
+        <div
+          *ngIf="addForm.controls['salary'].errors && (addForm.controls['salary'].dirty || addForm.controls['salary'].touched || myform.submitted)"
+          class="alert alert-danger">
+          <div *ngIf="addForm.controls['salary'].hasError('required')">
+            Salary is required.
+          </div>
+          <div *ngIf="addForm.controls['salary'].hasError('min')">
+            Salary must be greater than or equal to 1.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mb-2 text-center">
+        <button mat-button mat-flat-button color="primary"><fa-icon [icon]="faUserPlus"></fa-icon> Add</button>
+      </div>
+    </form>
+  </div>
+</div>

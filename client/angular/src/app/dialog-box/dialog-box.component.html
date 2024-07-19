@@ -1,0 +1,25 @@
+<!-- dialog-box.component.html -->
+<div class="border border-primary rounded">
+  <h1 *ngIf="action != 'Ok'" mat-dialog-title class="bg-dark text-light text-center"><strong>{{action}}
+      User?</strong></h1>
+  <h1 *ngIf="action == 'Ok'" mat-dialog-title class="bg-dark text-light text-center">
+    <strong>{{local_data.okMessage}}</strong></h1>
+  <div *ngIf="action == 'Ok'" mat-dialog-content class="mt-4">
+    <p>
+      <b>{{local_data.firstName}} {{local_data.lastName}} ({{local_data.username}})<br />{{local_data.okMessage}}</b>
+    </p>
+  </div>
+  <div *ngIf="action != 'Ok'" mat-dialog-content class="mt-4">
+    <p>
+      Are you sure you want to delete <b>{{local_data.firstName}} {{local_data.lastName}} ({{local_data.username}})</b>?
+    </p>
+  </div>
+  <div mat-dialog-actions class="justify-content-center">
+    <button *ngIf="action == 'Ok'" mat-button (click)="doAction()" mat-flat-button color="primary"><fa-icon
+        [icon]="faCheck"></fa-icon> {{action}}</button>
+    <button *ngIf="action != 'Ok'" mat-button (click)="doAction()" mat-flat-button color="warn"><fa-icon
+        [icon]="faTrash"></fa-icon> {{action}}</button>
+    <button *ngIf="action != 'Ok'" mat-button (click)="closeDialog()" mat-flat-button color="primary"><fa-icon
+        [icon]="faXmark"></fa-icon> Cancel</button>
+  </div>
+</div>

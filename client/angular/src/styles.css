@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+html{
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: Roboto, Arial, "Helvetica Neue", sans-serif;
+  margin: 0;
+  background-image: url('https://aiweb-plum.vercel.app/images/ai.jpg');
+
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when
+the content's height is greater than the image's height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based
+on the container's size */
+  background-size: cover;
+
+  /* Set a background color that will be displayed
+while the background image is loading */
+  background-color: #033761;
+}
+
+.basic-container {
+  padding: 30px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+  margin: 8px;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  background-color: blanchedalmond;
+  margin: 2em auto auto;
+}

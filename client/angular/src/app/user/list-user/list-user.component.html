@@ -1,0 +1,72 @@
+<div class="row justify-content-center">
+    <div *ngIf="currentUser" class="col-md-4 alert alert-success text-center my-0"><fa-icon
+            [icon]="faDoorOpen"></fa-icon>&nbsp;&nbsp;Welcome {{currentUser}}</div>
+</div>
+<div class="row p-2">
+    <div class="col-md-10 user-container border border-primary rounded p-2">
+        <h2 class="text-primary-emphasis text-center"> User Details</h2>
+        <p *ngIf="!isUser"><button mat-button mat-flat-button color="primary" (click)="addUser()"><fa-icon [icon]="faPlus"></fa-icon>
+                Add User</button>
+        </p>
+        <mat-form-field>
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
+        </mat-form-field>
+        <div class="table-container mat-elevation-z8 rounded">
+            <table mat-table [dataSource]="dataSource" matSort>
+                <!-- Id Column -->
+                <ng-container matColumnDef="_id" sticky>
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+                    <td mat-cell *matCellDef="let user"> {{user._id}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="firstName">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
+                    <td mat-cell *matCellDef="let user"> {{user.firstName}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="lastName">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>
+                    <td mat-cell *matCellDef="let user"> {{user.lastName}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="username">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header [hidden]="isUser"> Username </th>
+                    <td mat-cell *matCellDef="let user" [hidden]="isUser"> {{user.username}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="age">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Age </th>
+                    <td mat-cell *matCellDef="let user"> {{user.age}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="salary">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header [hidden]="isUser"> Salary </th>
+                    <td mat-cell *matCellDef="let user" [hidden]="isUser"> {{user.salary}} </td>
+                </ng-container>
+
+                <!-- Action Column -->
+                <ng-container matColumnDef="action" stickyEnd>
+                    <th mat-header-cell *matHeaderCellDef [hidden]="isUser"> Action </th>
+                    <td mat-cell *matCellDef="let user" class="action-link" [hidden]="isUser">
+                        <button mat-button mat-flat-button color="primary" (click)="editUser(user)"><fa-icon
+                                [icon]="faPen"></fa-icon> Edit</button>&nbsp;
+                        &nbsp;
+                        <button mat-button mat-flat-button color="warn" (click)="openDialog('Delete', user)"><fa-icon
+                                [icon]="faTrash"></fa-icon> Delete</button>
+                    </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            </table>
+        </div>
+        <!-- Angular 9 pagination -->
+        <mat-paginator [pageSizeOptions]="[50, 100, 200]" showFirstLastButtons></mat-paginator>
+    </div>
+</div>
