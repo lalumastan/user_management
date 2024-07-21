@@ -60,6 +60,7 @@ USER_MGMT_MONGO_URI</code></li>
 <li>Locate express server code.  Compile/build & run the code using <code>npm install<br/>npm start</code></li>
 <li>Locate angular client code.  Compile/build & run the code using <code>npm install<br/>npm start</code></li>
 <li>Open <a  href="http://localhost:4200" target="_new">http://localhost:4200</a> with your browser to interact with the user management web application.</li>
+</ul>
 
 ### References
 <ul>
