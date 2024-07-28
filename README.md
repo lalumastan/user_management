@@ -51,6 +51,7 @@ User Management Web Application consisting the following modules:
 <li>Download <a  href="https://nodejs.org/en/download">NodeJS</a> and install</li>
 <li>Download <a  href="https://code.visualstudio.com/download">Visual Studio Code</a> and install</li>
 <li>Download <a  href="https://www.eclipse.org/downloads/packages/">Eclipse IDE for Enterprise Java and Web Developers </a> and install</li>
+<li>Checkout <a  href="https://github.com/lalumastan/user_management.git">this code</a> from Github</li>
 <li>Create a free account on <a  href="https://account.mongodb.com" target="_new">MongoDB</a></li>
 <li>Download and install the <a  href="https://www.mongodb.com/try/download/database-tools" target="_new">MongoDB Command Line Database Tools</a></li>
 <li>Create <code>users</code> Collection.  Copy the connection information.  Alternatively, you can import data from <code>users.json</code> by running the <code>database\mongodb\import.cmd</code> on windows</li>
@@ -59,7 +60,6 @@ User Management Web Application consisting the following modules:
 <li>Create necessary MySQL database/schema, table and load data by executing the <code>database\mysql\users.sql</code> SQL script using the MySQL Workbench.</li>
 <li>Set the following environment variables related to your database connection information and database name<br/><code>USER_MGMT_MONGO_DB<br/>
 USER_MGMT_MONGO_URI</code></li>
-<li>Checkout <a  href="https://github.com/lalumastan/user_management.git">this code</a> from Github</li>
 <li>Locate angular client code. Compile/build & run the code using<br/><code>npm install</code><br/><code>npm start</code></li>
 <li>Locate express server code. Compile/build & run the code using<br/><code>npm install</code><br/><code>npm start</code></li>
 <li>Locate springboot mongodb server code. Compile/build & run the code using <code>mvn spring-boot:run</code></li>
