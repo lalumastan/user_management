@@ -57,7 +57,7 @@ User Management Web Application consisting the following modules:
 <li>Download <a  href="https://dev.mysql.com/downloads/mysql/">MySQL Community Server </a> and install</li>
 <li>Download <a  href="https://www.mysql.com/products/workbench/">MySQL Workbench</a> and install</li>
 <li>Create necessary MySQL database/schema, table and load data by executing the <code>database\mysql\users.sql</code> SQL script using the MySQL Workbench.</li>
-<li>Set the following environment variables related to your database connection information and database name<br/><code>USER_MGMT_MONGO_DB<br/>
+<li>Set the following environment variables related to your database connection information and database name<br/><code>USER_MGMT_MONGO_DB</code><br/><code>
 USER_MGMT_MONGO_URI</code></li>
 <li>Checkout <a  href="https://github.com/lalumastan/user_management.git">this code</a> from Github</li>
 <li>Locate angular client code. Compile/build & run the code using<br/><code>npm install</code><br/><code>npm start</code></li>
