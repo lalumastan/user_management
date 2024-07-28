@@ -60,8 +60,8 @@ User Management Web Application consisting the following modules:
 <li>Set the following environment variables related to your database connection information and database name<br/><code>USER_MGMT_MONGO_DB<br/>
 USER_MGMT_MONGO_URI</code></li>
 <li>Checkout <a  href="https://github.com/lalumastan/user_management.git">this code</a> from Github</li>
-<li>Locate angular client code. Compile/build & run the code using<br/><code>npm install<br/>npm start</code></li>
-<li>Locate express server code. Compile/build & run the code using<br/><code>npm install<br/>npm start</code></li>
+<li>Locate angular client code. Compile/build & run the code using<br/><code>npm install</code><br/><code>npm start</code></li>
+<li>Locate express server code. Compile/build & run the code using<br/><code>npm install</code><br/><code>npm start</code></li>
 <li>Locate springboot mongodb server code. Compile/build & run the code using <code>mvn spring-boot:run</code></li>
 <li>Locate springboot mysql server code. Compile/build & run the code using <code>mvn spring-boot:run</code></li>
 <li>Open <a  href="http://localhost:4200"  target="_new">http://localhost:4200</a> with your browser to interact with the user management web application.</li>
