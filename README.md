@@ -57,11 +57,11 @@ User Management Web Application consisting the following modules:
 <li>Download <a  href="https://dev.mysql.com/downloads/mysql/">MySQL Community Server </a> and install</li>
 <li>Download <a  href="https://www.mysql.com/products/workbench/">MySQL Workbench</a> and install</li>
 <li>Create necessary MySQL database/schema, table and load data by executing the <code>database\mysql\users.sql</code> SQL script using the MySQL Workbench.</li>
-<li>Set the following environment variables related to your database connection information and database name <code>USER_MGMT_MONGO_DB<br>
+<li>Set the following environment variables related to your database connection information and database name<br/><code>USER_MGMT_MONGO_DB<br/>
 USER_MGMT_MONGO_URI</code></li>
 <li>Checkout <a  href="https://github.com/lalumastan/user_management.git">this code</a> from Github</li>
-<li>Locate angular client code. Compile/build & run the code using <code>npm install<br>npm start</code></li>
-<li>Locate express server code. Compile/build & run the code using <code>npm install<br>npm start</code></li>
+<li>Locate angular client code. Compile/build & run the code using<br/><code>npm install<br/>npm start</code></li>
+<li>Locate express server code. Compile/build & run the code using<br/><code>npm install<br/>npm start</code></li>
 <li>Locate springboot mongodb server code. Compile/build & run the code using <code>mvn spring-boot:run</code></li>
 <li>Locate springboot mysql server code. Compile/build & run the code using <code>mvn spring-boot:run</code></li>
 <li>Open <a  href="http://localhost:4200"  target="_new">http://localhost:4200</a> with your browser to interact with the user management web application.</li>
@@ -92,4 +92,4 @@ USER_MGMT_MONGO_URI</code></li>
 <a  href="http://www.youtube.com/watch?feature=player_embedded&v=_YGyp7NWFSA"  target="_blank"><img  src="http://img.youtube.com/vi/_YGyp7NWFSA/0.jpg"  alt="How to Create Secure User Management Web Application using Springboot, Angular, MongoDB and JWT"  width="240"  height="180"  border="10"  /></a>
 
 ## Part4️⃣
-<a  href="http://www.youtube.com/watch?feature=player_embedded&v=Ax3hXtwDPRE "  target="_blank"><img  src="http://img.youtube.com/vi/Ax3hXtwDPRE /0.jpg"  alt="How to Create Secure User Management Web Application using Springboot, Angular, MySQL and JWT"  width="240"  height="180"  border="10"  /></a>
+<a  href="http://www.youtube.com/watch?feature=player_embedded&v=Ax3hXtwDPRE"  target="_blank"><img  src="http://img.youtube.com/vi/Ax3hXtwDPRE/0.jpg"  alt="How to Create Secure User Management Web Application using Springboot, Angular, MySQL and JWT"  width="240"  height="180"  border="10"  /></a>
